@@ -1,31 +1,13 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-import VueResource from 'vue-resource';
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
+import App from './App'
 
-require('es6-promise').polyfill();
-import { configRouter } from './config/routes';
+Vue.config.productionTip = false
 
-// Bootstrap 4
-require('bootstrap');
-
-// debug mode
-Vue.config.debug = false;
-
-// install vue-resource
-Vue.use(VueResource);
-
-// install router
-Vue.use(VueRouter);
-
-// create router
-const router = new VueRouter({
-  history: true,
-  saveScrollPosition: true
-});
-
-// configure router
-configRouter(router);
-
-// boostrap the app
-router.start(require('./app'), 'app');
-
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  template: '<App/>',
+  components: { App }
+})

@@ -1,36 +1,28 @@
-<style lang="sass" src="./assets/scss/main.scss"></style>
-
 <template>
-  <div class="app">
-
-    <page-header></page-header>
-
-    <div class="application main container">
-      <router-view class="view" transition="test" transition-mode="out-in" keep-alive></router-view>
-    </div>
-
-    <page-footer></page-footer>
-
+  <div id="app">
+    <img src="./assets/logo.png">
+    <hello></hello>
   </div>
 </template>
 
 <script>
+import Hello from './components/Hello'
 
-  import PageHeader from './components/layout/page-header.vue';
-  import PageFooter from './components/layout/page-footer.vue';
-
-  export default {
-    name: 'app',
-    data () {
-      return {
-        authenticating: false
-      };
-    },
-    components: {
-      PageHeader, PageFooter
-    },
-    ready: function () {
-
-    }
-  };
+export default {
+  name: 'app',
+  components: {
+    Hello
+  }
+}
 </script>
+
+<style>
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
