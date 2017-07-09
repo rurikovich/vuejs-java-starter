@@ -1,14 +1,11 @@
-package com.shardis;
+package org.vuespring;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * Created by Tomasz Kucharzyk
- */
 @SpringBootApplication
-public class ShardisFrameworkApplication {
+public class Application {
     public static void main(String[] args) {
-        SpringApplication.run(ShardisFrameworkApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }
